@@ -55,7 +55,7 @@ PROMPT = """Ты – специализированный ИИ-агент, за�
 - Адекватность рекомендаций по одежде.
 - Соблюдение указанного формата вывода."""
 
-TAVILY_API_KEY =  os.getenv("TAVILY_API_KEY")
+TAVILY_API_KEY =  os.environ["TAVILY_API_KEY"]
 
 giga2 = GigaChat(
     credentials=AUTHORIZATION_KEY,
