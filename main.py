@@ -5,7 +5,7 @@ from telebot.util import quick_markup
 import requests
 from model_giga import get_state_graph, call_model, create_memory_saver, get_list_input_message
 from model_giga import MESSAGES, START, SystemMessage, HumanMessage
-from agent import agent_executor
+
 from dotenv import load_dotenv
 import os
 
@@ -333,6 +333,7 @@ def checking_ai_dialog(chat_id) -> bool:
     session: dict | None = chat_sessions.get(chat_id)
     return not session or not session.get(FLAG_AI_DIALOG_SESSION)
 
+from agent import agent_executor
 
 @bot.callback_query_handler(func=lambda call: call.data == CALLBACK_DATA_WEATHER_AGENT)
 def get_weather_agent(call: types.CallbackQuery):
