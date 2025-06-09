@@ -100,7 +100,7 @@ def get_list_input_message(user_text):
 
 giga = GigaChat(
     credentials=AUTHORIZATION_KEY,
-    model="GigaChat-2",
+    model="GigaChat-2-Max",
     verify_ssl_certs=False,
     profanity_check=True,
     max_tokens=500,
